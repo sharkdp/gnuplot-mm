@@ -1,4 +1,4 @@
 gnuplot-mm
 ==========
 
-GnuPlot bindings for Mathematica 
+This package provide GnuPlot bindings for Mathematica.

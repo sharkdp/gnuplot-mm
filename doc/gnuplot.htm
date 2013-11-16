@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+        "HTMLFiles/xhtml-math11-f.dtd">
+
+<!-- Created by Wolfram Mathematica 9.0 : www.wolfram.com -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>
+  tests
+ </title>
+ <link href="custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<p class="Section">
+ <span style='font-style: italic;'>Mathematica</span> Gnuplot Integration
+</p>
+
+
+
+<p class="Subsection">
+ Basic examples
+</p>
+
+
+
+<p class="Text">
+ The <span class="OutputInline"><span class="InputFormInline">gnuPlot</span></span> function works (to some extend) analogous to the <span style='font-style: italic;'>Mathematica</span> <span class="OutputInline"><span class="InputFormInline">Plot</span></span> function.<br />The default plot variable is <span class="OutputInline"><span class="InputFormInline">x</span></span> and the default interval is from <span class="OutputInline"><span class="InputFormInline">-5</span></span> to <span class="OutputInline"><span class="InputFormInline">+5</span></span>.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/gnuplot_1.gif" alt="gnuplot_1.gif" width="209" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/gnuplot_2.gif" alt="gnuplot_2.gif" width="320" height="194" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ User defined variables and intervals can be given as second argument.<br />The option <span class="OutputInline"><span class="InputFormInline">PlotStyle</span></span> is used to add additional <span class="OutputInline"><span class="InputFormInline">gnuplot</span></span> commands before the automatically generated plot command.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/gnuplot_3.gif" alt="gnuplot_3.gif" width="650" height="17" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/gnuplot_4.gif" alt="gnuplot_4.gif" width="321" height="193" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ A set of functions can be given as first argument.<br />The third argument of <span class="OutputInline"><span class="InputFormInline">gnuPlot</span></span> is used to overwrite the default <span class="OutputInline"><span class="InputFormInline">plot</span></span> command.<br />The labels <span class="OutputInline"><span class="InputFormInline">#1</span></span>, <span class="OutputInline"><span class="InputFormInline">#2</span></span>, .. are used to identify the different data sets / functions. They are replaced internally by the respective file names.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/gnuplot_5.gif" alt="gnuplot_5.gif" width="941" height="40" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/gnuplot_6.gif" alt="gnuplot_6.gif" width="316" height="194" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Latex terminal
+</p>
+
+
+
+<p class="Text">
+ The <span class="OutputInline"><span class="InputFormInline">cairolatex</span></span> terminal can be used to set labels with Latex. Special characters have to be escaped.<br />The <span class="OutputInline"><span class="InputFormInline">PlotSize</span></span> option is used to modify the <span class="OutputInline"><span class="InputFormInline">gnuplot</span></span> output size.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/gnuplot_7.gif" alt="gnuplot_7.gif" width="777" height="68" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/gnuplot_8.gif" alt="gnuplot_8.gif" width="386" height="263" style="vertical-align:middle" />
+</p>
+
+<p class="Text">
+ The <span class="OutputInline"><span class="InputFormInline">LatexStyle</span></span> option can be used to supply additional Tex commands. This can be used to change the font family, for example.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/gnuplot_9.gif" alt="gnuplot_9.gif" width="796" height="62" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/gnuplot_10.gif" alt="gnuplot_10.gif" width="465" height="192" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ List plots
+</p>
+
+
+
+<p class="Text">
+ List plots work in the same way as the <span style='font-style: italic;'>Mathematica</span> <span class="OutputInline"><span class="InputFormInline">ListPlot</span></span> function.<br />Here, gnuplots <span class="OutputInline"><span class="InputFormInline">boxes</span></span> option is used to create a bar plot.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/gnuplot_11.gif" alt="gnuplot_11.gif" width="1621" height="40" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/gnuplot_12.gif" alt="gnuplot_12.gif" width="400" height="263" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Combined Data + Analytical plots
+</p>
+
+
+
+<p class="Text">
+ The <span class="OutputInline"><span class="InputFormInline">gnuData</span></span> helper function can be used to quicky create datasets from any analytic function.<br />Internally, the function <span class="OutputInline"><span class="InputFormInline">gnuPlot</span></span> uses <span class="OutputInline"><span class="InputFormInline">gnuListPlot</span></span> in combination with <span class="OutputInline"><span class="InputFormInline">gnuData</span></span>.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/gnuplot_13.gif" alt="gnuplot_13.gif" width="881" height="40" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/gnuplot_14.gif" alt="gnuplot_14.gif" width="541" height="194" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Using gnuplots &lsquo;multiplot&rsquo; feature
+</p>
+
+
+
+<p class="Text">
+ Not a feature of the script, but an easy way to use <span class="OutputInline"><span class="InputFormInline">gnuplot</span></span>s extended features.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/gnuplot_15.gif" alt="gnuplot_15.gif" width="859" height="62" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/gnuplot_16.gif" alt="gnuplot_16.gif" width="541" height="158" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ Combining with <span style='font-style: italic;'>Mathematica</span> Graphics functions
+</p>
+
+
+
+<p class="Text">
+ The graphs are usual <span style='font-style: italic;'>Mathematica</span> Graphics objects and can be manipulated
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/gnuplot_17.gif" alt="gnuplot_17.gif" width="1122" height="40" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/gnuplot_18.gif" alt="gnuplot_18.gif" width="100" height="100" style="vertical-align:middle" />
+</p>
+
+<p class="Subsection">
+ The PNG Terminal
+</p>
+
+
+
+<p class="Text">
+ PNG output works in the same way as PDF / Latex, but the size / linewidth and font options should be modified
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/gnuplot_19.gif" alt="gnuplot_19.gif" width="791" height="40" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/gnuplot_20.gif" alt="gnuplot_20.gif" width="358" height="173" style="vertical-align:middle" />
+</p>
+
+<p class="Subsubsection">
+ 3D plots
+</p>
+
+
+
+<p class="Text">
+ The <span class="OutputInline"><span class="InputFormInline">gnuListPlot</span></span> command can be used to create 3D plots as well.
+</p>
+
+
+
+<p class="Input">
+ <img src="HTMLFiles/gnuplot_21.gif" alt="gnuplot_21.gif" width="1585" height="62" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/gnuplot_22.gif" alt="gnuplot_22.gif" width="329" height="276" style="vertical-align:middle" />
+</p>
+
+<p class="Input">
+ <img src="HTMLFiles/gnuplot_23.gif" alt="gnuplot_23.gif" width="1646" height="84" style="vertical-align:middle" />
+</p>
+
+<p class="Output">
+ <img src="HTMLFiles/gnuplot_24.gif" alt="gnuplot_24.gif" width="441" height="295" style="vertical-align:middle" />
+</p>
+
+
+
+
+<div style="font-family:Helvetica; font-size:11px; width:100%; border:1px none #999999; border-top-style:solid; padding-top:2px; margin-top:20px;">
+ <a href="http://www.wolfram.com/products/mathematica/" style="color:#000; text-decoration:none;">
+  <img src="HTMLFiles/spikeyIcon.png" alt="Spikey" width="20" height="21" style="padding-right:2px; border:0px solid white; vertical-align:middle;" />
+  <span style="color:#555555">Created with</span> Wolfram <span style="font-style: italic;">Mathematica</span> 9.0
+ </a>
+</div>
+</body>
+
+</html>

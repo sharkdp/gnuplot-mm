@@ -1,11 +1,27 @@
 gnuplot-mm
 ==========
 
-This package provide GnuPlot bindings for Mathematica.
+This package provide GnuPlot bindings for Mathematica. It provides functions `gnuPlot` and `gnuListPlot` which work (to some extend) analogous to Mathematics own `Plot` and `ListPlot` functions.
 
-Example usage
--------------
-See some features action https://rawgithub.com/sharkdp/gnuplot-mm/master/doc/gnuplot.htm
+Examples
+--------
+gnuplot-mm generates a gnuplot command file for you, runs it in the background and imports the output back into Mathematica.
+Simply calling
+
+```Python
+gnuPlot[Exp[-y^2] Cos[2y], {y, -3, 3}, PlotStyle -> "set grid y @DGRAY"]
+```
+
+produces the following output
+
+![](https://rawgithub.com/sharkdp/gnuplot-mm/master/doc/HTMLFiles/gnuplot_4.gif "gnuplot-mm example 1")
+
+You can also use gnuplots *cairolatex* terminal from within Mathematica to produce LaTeX-rendered output:
+
+![](https://raw.github.com/sharkdp/gnuplot-mm/master/doc/HTMLFiles/gnuplot_10.gif "gnuplot-mm example 2")
+
+
+See more features in action: https://rawgithub.com/sharkdp/gnuplot-mm/master/doc/gnuplot.htm
 
 Installation
 ------------

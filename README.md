@@ -1,7 +1,7 @@
 gnuplot-mm
 ==========
 
-This package provide GnuPlot bindings for Mathematica. It provides functions `gnuPlot` and `gnuListPlot` which work (to some extend) analogous to Mathematics own `Plot` and `ListPlot` functions.
+This package provides GnuPlot bindings for Mathematica. It provides the functions `gnuPlot` and `gnuListPlot` which work (to some extend) analogous to Mathematics own `Plot` and `ListPlot` functions.
 
 Examples
 --------

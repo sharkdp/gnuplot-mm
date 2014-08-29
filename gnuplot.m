@@ -142,7 +142,7 @@ Module[{rootdir, plotdir, title, latex, png, delete, scriptfile, outfile, infile
         WriteString[lout, texlines];
         Close[lout];
 
-        If[Run["pdflatex", "-output-directory="<>plotdir, outfile, "> /tmp/pdflatexerr.log 2>&1"] != 0,
+        If[Run["pdflatex", "-halt-on-error", "-interaction=nonstopmode", "-output-directory="<>plotdir, outfile, "> /tmp/pdflatexerr.log 2>&1"] != 0,
             Print["There was an error executing pdflatex"];
             FilePrint["/tmp/pdflatexerr.log"];
         ];

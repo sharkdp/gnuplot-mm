@@ -8,7 +8,7 @@ Examples
 gnuplot-mm generates a gnuplot command file for you, runs it in the background and imports the output back into Mathematica.
 Simply calling
 
-```Python
+```Mathematica
 gnuPlot[Exp[-y^2] Cos[2y], {y, -3, 3}, PlotStyle -> "set grid y @DGRAY"]
 ```
 
